@@ -29,23 +29,16 @@ SELECT *
 
 # 4) Realiza un conteo de número total de equipos que existen en la tabla teams.
 
-SELECT COUNT (team)
-	FROM teams
+SELECT COUNT(team)
+	FROM teams;
     
-#MYSQL no me permite realizar la búsqueda. Me aparece que la función sports_analytics.COUNT no existe
-#HE AÑADIDO UNA MODIFICIACIÓN A LA TABLA TEAMS (columna TEAM > VALOR NOT NULL), YA QUE NORMALMENTE LA FUNCIÓN COUNT()
-#NO MUESTRA LOS VALORES NULOS, Y PENSABA QUE QUIZÁ PODRÍA ESTAR RELACIONADO,
-#PERO ME SIGUE APARECIENDO EL MISMO ERROR.
+    # El número total de equipos es 30.
 
-	# ALTER TABLE season
-	#MODIFY team_id BIGINT NOT NULL;#
-
-# RESPUESTA (versión tradicional): el número total de equipos es 30.
-
-#5)Calcula la media de todos los puntos conseguidos de la tabla stats
+#5)Calcula la media de todos los puntos conseguidos de la tabla stats.
 
 SELECT AVG(pts)
 	FROM stats;
+    
     #La media de los puntos conseguidos es 111.51666641235352
 
 # 6) Selecciona el máximo de victorias, máximo de puntos y la diferencia entre 
