@@ -8,8 +8,12 @@ USE sports_analytics;
 ##   disponible el identificador de la temporada y la temporada. Dicha consulta habría que realizarla
 ##   en stats (pts,win_percent...)
 
-SELECT MAX(w), MIN(w)
-	FROM stats;
+#SELECT #......# MAX(w), MIN(w)
+	#FROM stats;
+    
+SELECT team_id, MAX(w), MIN(w)
+	FROM stats
+    GROUP BY team_id;
     
     #Las victorias máximas son 55
     #Las victorias mínimas son 20
